@@ -1,0 +1,66 @@
+﻿<Window x:Class="CreatingTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreatingTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Text="Выбери что ты хочешь - пройти тест или отредактировать его" 
+                   Grid.Row="1" 
+                   Grid.Column="1" 
+                   TextWrapping="Wrap" 
+                   TextAlignment="Center"/>
+        
+        <Button Content="Пройти тест" 
+                BorderThickness="0"
+                Grid.Row="2"
+                Grid.Column="1"
+                Padding="50,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" Click="Button_Click"
+                />
+        
+        <Button Content="Редактировать тест" 
+                BorderThickness="0"
+                Grid.Row="3"
+                Grid.Column="1"
+                Padding="30,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" Click="Button_Click_1"
+                />
+
+        <TextBlock Text="Введите кодовую фразу:"
+                   Grid.Row="4" 
+                   Grid.Column="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Visibility="Hidden"
+                   x:Name="textBlock"/>
+        <TextBox VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Grid.Row="4"
+                 Grid.Column="1"
+                 BorderThickness="0,0,0,1"
+                 Width="150"
+                 HorizontalContentAlignment="Center"
+                 TextWrapping="Wrap"
+                 Visibility="Hidden"
+                 x:Name="textBox" KeyUp="textBox_KeyUp"/>
+    </Grid>
+</Window>
